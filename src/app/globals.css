@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Add vertical spacing between FullCalendar events */
+.my-custom-event {
+  margin-bottom: 4px !important;
+}
+
+/* Add a gradient to the true end segment of a multi-day event */
+.my-custom-event.fc-event-end {
+  background: linear-gradient(to right, #78B6F8FF, #e3c7fd) !important;
+  border-color: #5a5e97 !important;
+  margin-right: 50px !important; /* Add padding to the right to accommodate the gradient */
+}
+
+/* Responsive Table Card View for Mobile */
+@media (max-width: 768px) {
+  .responsive-table-container table {
+    border: 0;
+  }
+  .responsive-table-container thead {
+    display: none;
+  }
+  .responsive-table-container tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  .responsive-table-container td {
+    display: block;
+    padding-left: 50%;
+    position: relative;
+    text-align: right;
+    border-bottom: 1px solid #e2e8f0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .responsive-table-container td:last-child {
+    border-bottom: 0;
+  }
+  .responsive-table-container td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0.75rem;
+    width: 45%;
+    padding-right: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: #1f2937;
+  }
+}

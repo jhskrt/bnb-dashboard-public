@@ -1,0 +1,36 @@
+node_modules
+
+# ================================================
+# Sensitive Files - NEVER commit these
+# ================================================
+.env
+.env.local
+.env.production
+.env.production.local
+.env.development.local
+.env.test.local
+
+# Keep example files (these should be committed)
+!.env.example
+!.env.local.example
+
+# ================================================
+# Build & Generated Files
+# ================================================
+.next/
+/src/generated/prisma
+
+# ================================================
+# Private Notes & Documentation
+# ================================================
+GEMINI.md
+
+# ================================================
+# IDE & OS Files
+# ================================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
